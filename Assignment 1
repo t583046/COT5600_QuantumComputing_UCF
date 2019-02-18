@@ -1,0 +1,7 @@
+\documentclass[12pt]{article}
+\begin{document}
+Hello world!
+$Hello world!$ %math mode 
+
+https://colab.research.google.com/drive/1e6oZXhnB4r_NIG5r52DYIGYvkem5T1eI
+\end{document}
