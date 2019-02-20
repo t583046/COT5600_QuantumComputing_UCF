@@ -35,41 +35,7 @@
 
 \medskip
 \noindent
-Let $B=\{|\psi_1\>,\ldots,|\psi_d\>\}$ and $B'=\{|\psi'_1\>,\ldots,|\psi'_d\>\}$ be two orthonormal bases of $\C^d$. 
-
-The ONBs $B$ and $B'$ are called mutually unbiased if 
-\[
-|\< \psi_i | \psi'_j \>|^2 = \frac{1}{d} 
-\]
-for all $1\le i,j \le d$.
-
-Show that the eigenbases of the Pauli operators 
-\[
-\sigma_x = 
-\left(
-\begin{array}{cc}
-0 & 1 \\
-1 & 0
-\end{array}
-\right),
-%
-\sigma_y = 
-\left(
-\begin{array}{cc}
-0 & -i \\
-i & 0
-\end{array}
-\right),
-%
-\sigma_z = 
-\left(
-\begin{array}{cc}
-1 & 0 \\
-0 & -1
-\end{array}
-\right)
-\]
-are mutually unbiased. Implement Python methods that compute the eigenbases of the Pauli operators and check that they form mutually unbiased bases.
+\newline\href{https://github.com/t583046}
 
 \newpage
 
@@ -79,11 +45,41 @@ are mutually unbiased. Implement Python methods that compute the eigenbases of t
 
 \medskip
 \noindent
-For $A,B\in\C^{d\times d}$, define
-\[
-\< A | B\>_{\mathrm{Tr}} = \mathrm{Tr}(A^\dagger B)\,.
-\]
-Prove that the above map defines an inner product on the vector space $\C^{d\times d}$. (In the literature, this inner product is called the trace inner product or Hilbert-Schmidt inner product.)
+Proof:
+\newline
+Assuming \C^{d\times d}$ is a real vector space
+
+\newline
+\newline
+1) Using basic property of Trace: The matrix A and its Transpose have the same Trace. ie. 
+\newline
+\newline
+\indent\indent\(tr(A)  = tr(A^T)\)
+\newline
+\newline
+
+2)By definition of conjugate transpose, and assuming A has real entries, the conjugate transpose of A reduces to the transpose of A.
+\newline
+\newline
+\indent\indent ie. from 2,
+\newline
+\newline\indent\(3) A^\dagger = tr(A^T) = tr(A)\). This is simply the trace of A.\newline
+
+\indent4) This means that \(\< A | B\>_{\mathrm{Tr}} = \mathrm{Tr}(AB).\newline
+\newline
+ \indent\indent\(\< A | B\>_{\mathrm{Tr}} $  is also by definition the inner product trace. This Definition states that for real square matrices of the same size, \< A | B\>  = {\mathrm{Tr}}\((A B^T).\newline
+ 
+
+\indent5)From 1, \(B^T = \) \(B\), thus \< A | B\>  = \mathrm{Tr}(AB).\newline
+
+
+\newline\indent6) Therefore \(\mathrm{Tr}(AB) = \mathrm{Tr}(AB)\).\newline
+
+\textbf{Q.E.D. \< A | B\>_{\mathrm{Tr}} = \mathrm{Tr}(A^\dagger B)\,}.
+ 
+ 
+ 
+
 
 \newpage
 
@@ -92,15 +88,6 @@ Prove that the above map defines an inner product on the vector space $\C^{d\tim
 \noindent {\bf Problem 3} (Unitary error basis)
 
 \noindent
-Define the matrices $X,Z\in\C^{d\times d}$ as follows
-\begin{eqnarray}
-X & = & \sum_{k=0}^d |k+1\>\<k| \\
-Z & = & \sum_{\ell=0}^{d-1} \omega^\ell |\ell\>\<\ell|
-\end{eqnarray}
-where the addition is modulo $k+1$ and $\omega=e^{2\pi i/d}$ is a primitive $d$th root of unity. Show that the $d^2$ matrices
-\[
-M^{(a,b)} = X^a Z^b
-\]
-where $a,b\in\{0,\ldots, d-1\}$ form an orthonormal basis with respect to the trace inner product. Implement methods in Python that construct these matrices and compute the trace inner product for all pairs. (The above collection of matrices is called a unitary error basis in the literature and is used, for instance, in the theory of quantum error correcting codes and quantum channels for qudit systems. It is a generalization of the Pauli basis for a qubit system to a qudit system.)
-
+\newline\href{https://github.com/t583046}
+}
 \end{document}
